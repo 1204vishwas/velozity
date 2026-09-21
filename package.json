@@ -1,0 +1,33 @@
+{
+  "name": "velozity-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Velozity Global Solutions Technical Hiring Assessment Workspace",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,cyan\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "seed": "cd backend && npm run seed",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down -v"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "express",
+    "postgresql",
+    "prisma",
+    "socket.io",
+    "node-cron",
+    "realtime",
+    "dashboard"
+  ],
+  "author": "Full Stack Developer Candidate",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
